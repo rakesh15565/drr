@@ -4,21 +4,21 @@ pipeline {
         stage('Checkout Code') {
             steps {
             // Clone your Github repository
-                git branch: 'main' , url:'https://github.com/Dhanush3111/skilltest.git'
+                git branch: 'main' , url:'https://github.com/rakesh15565/drr.git'
             }
         }
 
         stage('Compile java code') {
             steps {
                 // Navigate to the directory where the java file is located 
-                bat 'javac simple.java'
+                bat 'javac SimpleStringOperations.java'
             }
         }
 
         stage('Run java program') {
             steps {
                 // Execute the java program with input (Example : adding two numbers)
-                bat 'echo 10 20 | java simple'
+                bat 'java SimpleStringOperations'
             }
         }
 
